@@ -10,9 +10,17 @@
 			<ul>
 		<!-- this is all server side code  -->
 				<?php require("includes/connect.php"); 
+
+		require_once(__DIR__ . "/controller/login-varify.php");
+		
+		if (authentication()) {
+
+		require_once(__DIR__ . "/view/navigation.php");
+			}
+	    
 				$mysqli = new mysqli('localhost', 'root', 'root', 'todo2');
 				//this query is ordering a task by date and time
-				$query = 'SELECT * FROM tasks ORDER BY date ASC, time ASC';
+				$query = "SELECT * FROM tasks ORDER BY date ASC, time ASC";
 				if($result = $mysqli->query($query)){
 					$numrows = $result->num_rows;
 					if($numrows>0){
@@ -38,6 +46,7 @@
 	</div>
 </body>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
 	add_task();
 	//This is my add_task function
