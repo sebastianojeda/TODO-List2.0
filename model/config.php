@@ -6,12 +6,12 @@
 	//reuses the login id.
 
 	//its gonna start a session for us on our webpage.
-	$path = "/sebBlog/";
+	$path = "/TODO-List2.0/";
 	
 	$host = "localhost";
 	$username = "root";
 	$password = "root";
-	$database = "blog_db";
+	$database = "todo2";
 	//stores all of the variables
 
 	if(!isset($_SESSION["connection"])) {

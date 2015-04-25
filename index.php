@@ -9,14 +9,7 @@
 		<div class="task-list">
 			<ul>
 		<!-- this is all server side code  -->
-				<?php require("includes/connect.php"); 
-
-		require_once(__DIR__ . "/controller/login-varify.php");
-		
-		if (authentication()) {
-
-		require_once(__DIR__ . "/view/navigation.php");
-			}
+		<?php require("includes/connect.php"); 
 	    
 				$mysqli = new mysqli('localhost', 'root', 'root', 'todo2');
 				//this query is ordering a task by date and time
@@ -44,6 +37,14 @@
 		<input type="text" name="new-task" placeholder="Add new item..."/>
 	</form>
 	</div>
+
+	<div class="reg">
+		<?php
+		require_once(__DIR__ . "/controller/login-varify.php");
+		require_once(__DIR__ . "/view/login-form.php");
+		require_once(__DIR__ . "/view/register-form.php");	?>
+	</div>
+
 </body>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
