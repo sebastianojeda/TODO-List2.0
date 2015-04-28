@@ -38,12 +38,7 @@
 	</form>
 	</div>
 
-	<div class="reg">
-		<?php
-		require_once(__DIR__ . "/controller/login-varify.php");
-		require_once(__DIR__ . "/view/login-form.php");
-		require_once(__DIR__ . "/view/register-form.php");	?>
-	</div>
+	
 
 </body>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>

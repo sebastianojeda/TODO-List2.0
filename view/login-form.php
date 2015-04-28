@@ -6,7 +6,7 @@
 
 	<!--This login form allows my users to login-->
 	<!--after they sign up.-->
-	<form method="post" action="<?php echo $path . "controller/login-user.php";?>">
+	<form method="post" action="<?php echo $path . "index.php";?>">
 
 	<div>
 		<label for="username">Username:</label>

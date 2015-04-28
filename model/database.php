@@ -47,7 +47,7 @@ class Database{
 	}
 		//this else statement is echoing a string
 	else{
-		echo "<p>database has already been created.</p>";
+		// echo "<p>database has already been created.</p>";
 	}
 	}
 
