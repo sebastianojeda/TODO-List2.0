@@ -9,38 +9,34 @@
 		<div class="task-list">
 			<ul>
 		<!-- this is all server side code  -->
-		<?php require("includes/connect.php"); 
-	    
+		<?php require("includes/connect.php"); 	    
 				$mysqli = new mysqli('localhost', 'root', 'root', 'todo2');
 				//this query is ordering a task by date and time
 				$query = "SELECT * FROM tasks ORDER BY date ASC, time ASC";
 				if($result = $mysqli->query($query)){
+
 					$numrows = $result->num_rows;
 					if($numrows>0){
+
 						while($row = $result->fetch_assoc()){
 							$task_id = $row['id'];
 							$task_name = $row['task'];
 
-							echo '<li>
-							<span>'.$task_name.'</span>
-							<img id="'.$task_id.'" class="delete-button" width="10px" src="img/close.svg"/>
-							</li>';
+							echo '<li><span>'.$task_name.'</span><img id="'.$task_id.'" class="delete-button" width="10px" src="img/close.svg" /></li>';
 						}
 					}
 				}
+
 				?>
 			<!-- End of server side code -->
 			</ul>
-		</div>
-		
+
+		</div>		
 	<form class="add-new-task" autocomplete="off">
 		<input type="text" name="new-task" placeholder="Add new item..."/>
 	</form>
 	</div>
 
-	
-
-</body>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
@@ -55,15 +51,14 @@
 					$('add-new-task input[name=new-task]').val();
 						$(data).appendTo('.task-list ul').hide().fadeIn();
 				});
-			}
+			};
 			return false;
 		});
 	}
 	//this function will fade a element when cliked on. the element will come from mt delete-task.php file. 
-	$('delete-button').click(function(){
+	$(".task-list").on("click", ".delete-button", function(){
 		var current_element = $(this);
 		var task_id = $(this).attr('id');
-
 		$.post('includes/delete-task.php', {id: task_id}, function(){
 		current_element.parent().fadeOut("fast", function(){
 			$(this).remove();
@@ -71,4 +66,5 @@
 	});
 });
 </script>
+</body>
 </html>

@@ -2,11 +2,11 @@
 <?php
 	require_once(__DIR__ . "/../model/config.php");
 ?>
-	<h1 class="title">Login</h1>
+	<h1 class="h1">Login</h1>
 
 	<!--This login form allows my users to login-->
 	<!--after they sign up.-->
-	<form method="post" action="<?php echo $path . "index.php";?>">
+	<form class="login" method="post" action="<?php echo $path . "index.php";?>">
 
 	<div>
 		<label for="username">Username:</label>

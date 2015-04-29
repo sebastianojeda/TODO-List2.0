@@ -2,10 +2,9 @@
 <?php
 	require_once(__DIR__ . "/../model/config.php");
 ?>
+<h1 class="h1">Register</h1>
 
-<h1>Register</h1>
-
-<form method="post" action="<?php echo $path . "index.php";?>">
+<form class="register" method="post" action="<?php echo $path . "index.php";?>">
 	<div>
 		<label for="email">Email:</label>
 		<input type="text" name="email" />
