@@ -26,3 +26,4 @@
 			}else{
 				echo "<p>" . $_SESSION["connection"]->error . "</p>";
 			}
+	header("Location: " .$path . "login.php");

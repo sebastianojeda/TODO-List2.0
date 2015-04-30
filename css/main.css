@@ -78,6 +78,14 @@ body{
 	
 }
 
+
+.header{
+
+}
+.navbar-default{
+	
+}
+
 @media (max-width: 320px) {
 	body {
 		background-image: url("../img/flyLights.jpg");
@@ -87,6 +95,25 @@ body{
 	.body {
 		background-color: green;
 	}
+	.wrap{
+	width: 700px;
+	height: 800px;
+	margin: 0 auto;
+	border-radius: 45px;
+	background-color: white;
+	opacity: 0.8;
+
+}
+.task-list{
+	width: 88%;
+	min-height: 300px;  
+	margin-top: 40px;
+	color: black;
+	padding: 33px 6%;
+}
+.add-new-task{
+	margin-top:66%; 
+}
 }
 
 @media (max-width: 1024px) {
@@ -98,4 +125,23 @@ body{
 	.body {
 		background-color: blue;
 	}
+	.wrap{
+	width: 700px;
+	height: 800px;
+	margin: 0 auto;
+	border-radius: 45px;
+	background-color: white;
+	opacity: 0.8;
+
+}
+.task-list{
+	width: 88%;
+	min-height: 300px;  
+	margin-top: 40px;
+	color: black;
+	padding: 33px 6%;
+}
+.add-new-task{
+	margin-top:66%; 
+}
 }

@@ -4,6 +4,21 @@
 	<title>TODO-list2.0</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+<header class="header">
+	<nav class="navbar-default">
+  <div class="container">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="navbar" >
+      <ul class="navbar-nav">
+        <li class="active"><a href="#">Link </a></li>
+        <li><a class="active" href="#">Link</a></li>
+         <li><a class="active" href="#">Link</a></li> 
+          <li><a class="active" href="#">Link</a></li> 
+      </ul>     
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</header>
 <body>
 	<div class="wrap">
 		<div class="task-list">

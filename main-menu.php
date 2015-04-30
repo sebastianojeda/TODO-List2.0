@@ -11,11 +11,11 @@
 		
 	?>
 	</div>
-	<div class="row2">
+	<!-- <div class="row2">
 		<?php
-		require_once(__DIR__ . "/view/login-form.php");
+		// require_once(__DIR__ . "/view/login-form.php");
 		?>
-	</div>
+	</div> -->
 </body>
 </html>
 
